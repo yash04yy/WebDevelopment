@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 7-Flexbox</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    
+    .c1 {
+        flex: 1;
+        background-color: darkseagreen;
+        text-align: center;
+    }
+    
+    .c2 {
+        display: flex;
+        flex: 5;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header {
+        background-color: greenyellow;
+        flex: 2;
+    }
+    
+    .article {
+        flex: 4;
+    }
+    
+    .footer {
+        background-color: greenyellow;
+        flex: 2;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="c1">
+            <h1>Nav</h1>
+        </div>
+        <div class="c2">
+            <div class="header">
+                <h1>Header</h1>
+            </div>
+            <div class="article">
+                <h1>Article</h1>
+            </div>
+            <div class="footer">
+                <h1>Footer</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

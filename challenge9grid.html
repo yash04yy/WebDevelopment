@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=c">
+    <title>Challenge 9 Grid</title>
+</head>
+<style>
+    body {
+        display: grid;
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
+        height: 100vh;
+        grid-gap: 0.8rem;
+        border: thistle 1px;
+        border-radius: 0.8rem;
+    }
+    
+    .items {
+        background-color: yellow;
+        padding: 20px;
+    }
+    
+    nav {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    header {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
+    article {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    
+    section {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    
+    footer {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+</style>
+
+<body>
+    <nav class="items">Nav</nav>
+    <header class="items">Header</header>
+    <article class="items">Article</article>
+    <section class="items">Ads</section>
+    <footer class="items">Footer</footer>
+</body>
+
+</html>

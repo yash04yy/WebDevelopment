@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    style
+      include ../static/style.css
+  body
+     nav#navbar
+        ul
+            div#logo
+              img(src="/static/img/3.png")
+              | YDA
+            li #[a(href="/") Home ]
+            li #[a(href="/") About Us ]
+            li #[a(href="/") Courses ]
+            li #[a(href="/") Classes taken]
+            li #[a(href="/contact.pug") Contact Us]
+    section#introsection 
+        div Welcome to Yash's Dance Academy 
+        div.small Anybody Can Dance!
+    section#missionsection
+        h2 Our Mission
+        div.card
+          div.card-box
+            div.card-img
+              img(src="/static/img/1.png")
+            div.card-content
+              p Achieve Perfection
+        div.card
+          div.card-box
+            div.card-img
+              img(src="/static/img/2.png")
+            div.card-content
+              p All Forms
+        div.card
+          div.card-box
+            div.card-img
+              img(src="/static/img/3.png")
+            div.card-content
+              p Dance Free
+    section#sponsorsection 
+        h3 Our Sponsors
+        div.logo-img 
+          img(src="/static/img/logo1.png")
+          img(src="/static/img/logo.png")  
+          img(src="/static/img/logo3.png")  
+          img(src="/static/img/logo4.png")  
+    footer#footer 
+        div All Rights Reserved
+    script
+      include ../static/index.js

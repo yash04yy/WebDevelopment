@@ -1,0 +1,40 @@
+extends base.pug
+
+block scripts 
+    script(src="/static/index.js")
+
+block style 
+    style 
+        include ../static/style.css
+
+block content 
+    section#introsection 
+        div Welcome to Yash's Dance Academy 
+        div.small Anybody Can Dance!
+    section#missionsection
+        h2 Our Mission
+        div.card
+          div.card-box
+            div.card-img
+              img(src="/static/img/1.png")
+            div.card-content
+              p Achieve Perfection
+        div.card
+          div.card-box
+            div.card-img
+              img(src="/static/img/2.png")
+            div.card-content
+              p All Forms
+        div.card
+          div.card-box
+            div.card-img
+              img(src="/static/img/3.png")
+            div.card-content
+              p Dance Free
+    section#sponsorsection 
+        h3 Our Sponsors
+        div.logo-img 
+          img(src="/static/img/logo1.png")
+          img(src="/static/img/logo.png")  
+          img(src="/static/img/logo3.png")  
+          img(src="/static/img/logo4.png")

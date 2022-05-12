@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE/contact.css">
+    <title>MemeSpace | Login/Signup</title>
+    <script>
+        function validate_name() {
+            let name = document.getElementById("name").value;
+            var ideal = /\s/;
+            if (name.match(ideal)) {
+                alert("Please enter name without space !");
+                return false;
+            } else {
+                return true;
+            }
+
+        }
+
+        function validate_phone() {
+            let phone = document.getElementById("phone").value;
+            var ideal_number = /^\d{10}$/;
+            if (phone.match(ideal_number)) {
+                return true;
+            } else {
+                alert("Please enter 10 digit phone number!");
+                return false;
+            }
+
+        }
+
+        function validate_password() {
+            let pass = document.getElementById("password").value;
+            var ideal_us = /[A-Z]+/;
+            var ideal_digit = /[0-9]+/;
+            var ideal_char = /[@,#,$,&]+/;
+            if (pass.length >= 7) {
+                if (pass.match(ideal_us)) {
+                    if (pass.match(ideal_digit)) {
+                        if (pass.match(ideal_char)) {
+                            return true;
+                        } else {
+                            alert("Please enter at least one special character!");
+                            return false;
+                        }
+
+                    } else {
+                        alert("Please enter at least one digit!");
+                        return false;
+                    }
+
+                } else {
+                    alert("Please enter atleast one uppercase character!");
+                    return false;
+                }
+
+            } else {
+                alert("Password must be at least 7 characters long!");
+                return false;
+            }
+        }
+
+        function validate_confirmpass() {
+            let cp = document.getElementById("confirmpassword").value;
+            let p = document.getElementById("password").value;
+            if (cp == p) {
+                return true;
+            } else {
+                alert("Password does not match!");
+                return false;
+            }
+
+        }
+
+        function validate_email() {
+            let email = document.getElementById("email");
+            if (email.value.indexOf("@") > 1) {
+                if (email.value.indexOf(".") > 5) {
+                    if ((email.value.charAt(email.value.length - 4) == ".") || (email.value.charAt(email.value.length - 3) == ".")) {
+                        return true;
+                    } else {
+                        alert("Email must contain 2 or 3 letters after . character ");
+                        return false;
+                    }
+                } else {
+                    alert("Email must contain . and atleast 3 letters between . and @");
+                    return false;
+                }
+            } else {
+                alert("Email must contain @ sign after few letters");
+                return false;
+            }
+        }
+
+        function validate() {
+            alert("Form Submitted Successfully!");
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav>
+        <a class="menu-btn" href="./home.html">Home</a>
+        <a class="menu-btn" href="./discover.html" target="_blank">Your Wall</a>
+        <a class="menu-btn" href="#">Chat</a>
+        <a class="menu-btn" href="#">Videos</a>
+        <a class="menu-btn flex-align-right" href="./contact.html" target="_blank">Login/Signup</a>
+    </nav>
+    <div class="heading">
+        <h2> Login/Signup</h2>
+    </div>
+
+    <form name="myForm" onsubmit="validate()" method="post">
+        <input id="name" type="text" class="feedback-input" placeholder="Username*" onchange="validate_name()" />
+        <input id="email" type="text" class="feedback-input" placeholder="Email*" onchange="validate_email()" />
+        <input id="phone" type="number" class="feedback-input" placeholder="Phone*" onchange="validate_phone()" />
+        <input id="password" type="password" class="feedback-input" placeholder="Password*" onchange="validate_password()" />
+        <input id="confirmpassword" type="password" class="feedback-input" placeholder="ConfirmPassword*" onchange="validate_confirmpass()" />
+        <input type="submit" value="SUBMIT" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+extends base.pug
+
+block scripts 
+    script(src="/static/index.js")
+
+block style 
+    style 
+        include ../static/style.css
+        include ../static/contactstyle.css
+block content 
+    div.container
+        h1 Contact Us 
+        form(action="/contact",method="post",class="myForm",required)
+            input(type="text",class="myInput",name="name",placeholder="Enter your name")
+            input(type="phone",class="myInput",name="phone",placeholder="Enter your Mobile no.")
+            input(type="email",class="myInput",name="email",placeholder="Enter your email id")
+            select(name="concern",id="concern",class="myInput")
+                option(value="")|--Select a concern type--
+                option(value="join")|Join Classes
+                option(value="scholarship")|Apply for a Scholarship
+                option(value="schedule")|Get Classes Schedule
+                option(value="complaint")|Register a complaint
+                option(value="other")|Other
+            textarea(name="elaboration", cols="30", rows="10",class="myInput",placeholder="Elaborate your concern")
+            button(class="btn")
+                | Submit 

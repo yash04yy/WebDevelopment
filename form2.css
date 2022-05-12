@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: aqua;
+    height: 50px;
+}
+
+.navlogo img {
+    padding: -5px 0px;
+    width: 52px;
+    height: 50px;
+    margin: -1px 0px;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 7vh;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    font-family: 'Balsamiq Sans', cursive;
+    margin: 0px 4px;
+    padding: 2px 2px;
+    display: flex;
+    padding: 16px 60px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.nav-list li a:hover {
+    background-color: black;
+    color: white;
+}
+
+.web-dev h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 14px 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.web-dev p {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.video {
+    margin: 32px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+
+.video video {
+    margin: 6px 23px;
+}
+
+
+/* THIS IS THE footer */
+
+footer {
+    display: flex;
+    background-color: black;
+    height: 40px;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+}
+
+@media(max-width:1076px) {
+    img {
+        display: none;
+    }
+    .nav-list ul {
+        display: flex;
+        justify-content: center;
+        width: 55vw;
+    }
+}
+
+@media(max-width:978px) {
+    .nav-list ul {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+}
+
+@media(max-width:543px) {
+    .nav-list li a {
+        font-family: 'Balsamiq Sans', cursive;
+        margin: 0px -13px;
+        padding: 2px 2px;
+        display: flex;
+        padding: 16px 40px;
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+    .nav-bar {
+        display: flex;
+        background-color: rgb(20, 32, 23);
+        height: 50px;
+        width: 104%;
+    }
+    .video video {
+        margin: 6px 23px;
+        width: 325px;
+    }
+}
+
+@media (max-width:332px) {
+    .video video {
+        margin: 6px 23px;
+        width: 262px;
+    }
+    .nav-list li a {
+        font-family: 'Balsamiq Sans', cursive;
+        margin: 0px -13px;
+        padding: 2px 2px;
+        display: flex;
+        padding: 16px 31px;
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+    }
+}

@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Belgrano', serif;
+    background-color: rgb(0, 0, 0);
+    font-size: large;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+.header {
+    margin: 0 auto;
+    min-height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(bcg-img.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(165, 85, 116);
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 70px
+}
+
+.star {
+    color: red;
+    background: transparent;
+    padding: 1mm;
+}
+
+form input {
+    padding: 5px 40px;
+    background: azure;
+    border: 1px solid black;
+    border-radius: 1px;
+    outline: none;
+}
+
+form label {
+    font-weight: bold;
+    text-align: center;
+    background: transparent;
+    padding: 1mm;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    border: 1px solid rgb(110, 51, 51);
+    background: rgb(187, 114, 114);
+    transition: 1s;
+}

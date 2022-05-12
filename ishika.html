@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Registration</title>
+    <link rel="stylesheet" href="ishika.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <form>
+                <label for="title" id="title">EXAM REGISTERATION FORM</label>
+                <br>
+                <br>
+
+                <label for="name">Username<span class="star">*</span> </label>
+                <input placeholder="ishika22" type="text" id="uname" name="uname" required onchange="validate_name()">
+                <br>
+                <label for="email">Email id<span class="star">*</span> </label>
+                <input placeholder="123456@mitwpu.edu.in" type="email" id='email' name='email' required onchange="validate_email()">
+                <br>
+                <label for="phone">Contact Number<span class="star">*</span> </label>
+                <input type="number" id='phone' name='phone' required onchange="validate_phone()">
+                <br>
+                <label for="password">Password<span class="star">*</span> </label>
+                <input type="password" id='password' name='password' required onchange="validate_password()">
+                <br>
+                <label for="confirm-pass">Re-Enter Password<span class="star">*</span> </label>
+                <input type="password" id='confirm-pass' name='confirm-pass' required onchange="validate_confirmpass()"><br>
+                <br>
+                <input class="btn" type="submit" value="Submit">
+                <input class="btn" type="reset" value="Reset">
+            </form>
+        </div>
+        </section>
+        <script src="ishika.js"></script>
+</body>
+
+</html>

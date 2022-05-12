@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <script>
+        let i = 0;
+        /* for (i = 0; i < 3; i++) {
+             console.log(i);
+         } 
+        let friends = ["Yash", "W", "Parth"];
+        for (let index = 0; index < friends.length; index++) {
+            console.log("Hello friend," + friends[index]);
+        }*/
+        let employee = {
+            name: "Yash",
+            roll: 63,
+            college: "MITWPU",
+        };
+        // use this loop to iterate over objects in javascript
+        for (key in employee) {
+            console.log(`${key} of employee is ${employee[key]}`);
+        }
+    </script>
+</body>
+
+</html>

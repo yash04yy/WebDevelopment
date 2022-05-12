@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 6 Flexbox</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 10px;
+    }
+    /*this is used to change the rem size from 16px to 10px , this makes it easy to make the website responsive using media queries*/
+    
+    body {
+        background-color: cadetblue;
+    }
+    
+    .section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: 25%;
+        background: cornsilk;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    
+    .fit {
+        margin-top: 2rem;
+        display: block;
+    }
+    
+    .para {
+        padding: 3em 2em;
+        text-align: center;
+        display: block;
+    }
+    
+    .btn {
+        padding: 1rem 0.4rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid grey;
+        width: 15rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: gold;
+    }
+    
+    .bttn {
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .btn:hover,
+    .bttn:hover {
+        background-color: cyan;
+        cursor: grab;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 4 rem -1rem grey;
+    }
+    
+    .price {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    @media screen and(max: width 1000px;
+    ) {
+        .card {
+            width: 40%;
+        }
+    }
+    
+    @media screen and(max: width:800px) {
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 50%;
+        }
+    }
+</style>
+
+<body>
+    <div class="section">
+        <div class="card">
+            <div class="image">
+                <img src="./IMG/xiaomi-poco-x3-1.jpg" width="100rem" height="150rem" class="fit">
+            </div>
+            <div class="para">
+                <h2>POCO X3</h2>
+                <br>
+                <p>RAM 6 GB Processor Qualcomm Snapdragon 732G <br><br> Rear Camera 64 MP + 13 MP + 2 MP + 2 MP Front Camera 20 MP<br><br> Battery 6000 mAh Display 6.67 inches</p>
+                <p class="price">&#8377 19,999</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="bttn">Buy Now</a>
+            </div>
+        </div>
+        <div class="card 2">
+            <div class="image">
+                <img src="./IMG/realme7pro.jpg" height="150rem" class="fit" alt="">
+            </div>
+            <div class="para">
+                <h2>Realme 7 Pro</h2>
+                <br>
+                <p>RAM 6 GB Processor Qualcomm Snapdragon 733 <br><br> Rear Camera 64 MP + 13 MP + 5 MP + 5 MP Front Camera 30 MP<br><br> Battery 4500 mAh Display 6.67 inches</p>
+                <p class="price">&#8377 21,000</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="bttn">Buy Now</a>
+            </div>
+        </div>
+        <div class="card 3">
+            <div class="image">
+                <img src="./IMG/iphone11.jpg" width="100rem" height="150rem" class="fit">
+            </div>
+            <div class="para">
+                <h2>Iphone 11</h2>
+                <br>
+                <p>RAM 4 GB Processor IOS <br><br> Rear Camera 32 MP Front Camera 20 MP<br><br> Battery 3000 mAh Display 6.67 inches</p>
+                <p class="price">&#8377 49,999</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="bttn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="card">
+            <div class="image">
+                <img src="./IMG/xiaomi-poco-x3-1.jpg" width="100rem" height="150rem" class="fit">
+            </div>
+            <div class="para">
+                <h2>POCO X3</h2>
+                <br>
+                <p>RAM 6 GB Processor Qualcomm Snapdragon 732G <br><br> Rear Camera 64 MP + 13 MP + 2 MP + 2 MP Front Camera 20 MP<br><br> Battery 6000 mAh Display 6.67 inches</p>
+                <p class="price">&#8377 19,999</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="bttn">Buy Now</a>
+            </div>
+        </div>
+        <div class="card 2">
+            <div class="image">
+                <img src="./IMG/realme7pro.jpg" height="150rem" class="fit" alt="">
+            </div>
+            <div class="para">
+                <h2>Realme 7 Pro</h2>
+                <br>
+                <p>RAM 6 GB Processor Qualcomm Snapdragon 733 <br><br> Rear Camera 64 MP + 13 MP + 5 MP + 5 MP Front Camera 30 MP<br><br> Battery 4500 mAh Display 6.67 inches</p>
+                <p class="price">&#8377 21,000</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="bttn">Buy Now</a>
+            </div>
+        </div>
+        <div class="card 3">
+            <div class="image">
+                <img src="./IMG/iphone11.jpg" width="100rem" height="150rem" class="fit">
+            </div>
+            <div class="para">
+                <h2>Iphone 11</h2>
+                <br>
+                <p>RAM 4 GB Processor IOS <br><br> Rear Camera 32 MP Front Camera 20 MP<br><br> Battery 3000 mAh Display 6.67 inches</p>
+                <p class="price">&#8377 49,999</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="bttn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

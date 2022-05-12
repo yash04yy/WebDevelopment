@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Litsening to events</title>
+</head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: red;
+        color: yellow;
+        border: 2px solid black;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vitae excepturi sunt animi unde nisi nam deserunt similique corrupti veniam repudiandae a natus minus deleniti vel nesciunt architecto earum hic, quasi sit incidunt modi quas eligendi. Odio
+            consequatur, natus voluptatibus rerum ratione amet neque minus eum voluptas expedita maiores ad numquam quae vel doloremque, ab fugiat atque reiciendis qui? Voluptatem a sint iusto dolores voluptate in cum quia, magni commodi quos iste autem
+            consectetur architecto ad, quibusdam numquam suscipit! Dicta, praesentium esse maxime illum similique ex voluptatibus! Deserunt perspiciatis commodi delectus pariatur perferendis sunt modi temporibus corrupti quaerat libero? Possimus.
+        </p>
+        <button id="btn" onclick="togglehide()">
+           Show/Hide
+        </button>
+    </div>
+    <script>
+        let para = document.getElementById("para");
+        para.addEventListener("mouseover", function run() {
+            alert("Mouse inside");
+        });
+        para.addEventListener("mouseout", function run() {
+            alert("Mouse outside");
+        });
+
+        function togglehide() {
+            let btn = document.getElementById("btn");
+            let para = document.getElementById("para");
+            if (para.style.display != "none") {
+                para.style.display = "none";
+            } else {
+                para.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

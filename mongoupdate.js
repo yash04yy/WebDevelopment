@@ -1,0 +1,1 @@
+db.items.updateOne({ name: "poco x3" }, { $set: { price: "20000" } })
